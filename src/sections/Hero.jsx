@@ -1,12 +1,14 @@
 import React from 'react';
 import heroImg from '../assets/images/hero-home.png';
+import { FaMapMarkerAlt, FaCalendarAlt, FaUser } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
 
 const Hero = () => {
     return (
         <section className="mb-40">
-            <div className="bg-neutral-50 m-12 text-center lg:text-left">
+            <div className=" my-8 mx-16 text-center lg:text-left">
                 <div className="w-100">
-                    <div className="grid rounded-lg items-center gap-12 lg:grid-cols-2">
+                    <div className="bg-neutral-50 grid rounded-tl-[50px] items-center gap-12 lg:grid-cols-2">
                         <div className="mt-12 px-8 lg:mt-0">
                             <h1 className="mt-2 mb-8 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
                                 Find your perfect <br /><span className="text-primary">place to stay</span>
@@ -22,12 +24,68 @@ const Hero = () => {
                                 <a className="inline-block rounded pt-2 pb-3.5 text-xl font-semibold capitalize leading-normal text-primary" role="button">Watch Video</a>
                             </div>
                         </div>
-                        <div className="mb-12 lg:mb-0 rounded-t-xl">
+                        <div className="bg-white mb-12 lg:mb-0 rounded-t-xl">
                             <img src={heroImg}
-                                className="w-full shadow-lg" alt="Hero Home" />
+                                className="w-full" alt="Hero Home" />
                         </div>
                     </div>
                 </div>
+        <div className="absolute bottom-6 w-[75%] mx-auto bg-white left-0 right-0 rounded-full flex justify-between p-2 md:p-6 items-center shadow-lg">
+          {/* left div  */}
+
+          {/* 1st */}
+          <div className="flex items-start gap-2  ">
+            <FaMapMarkerAlt />
+            <span className="flex flex-col gap-1">
+              <p className="m-0 text-[16px] md:text-[20px] font-normal text-[#222222]">
+                Location
+              </p>
+              <p className="m-0 text-[#555555] text-[14px] hidden md:block">
+                United States
+              </p>
+            </span>
+          </div>
+          {/* 2nd  */}
+          <div className="flex items-start gap-2">
+            <FaCalendarAlt />
+            <span className="flex flex-col gap-1">
+              <p className="m-0 text-[16px] md:text-[20px] font-normal text-[#222222]">
+                Check in
+              </p>
+              <p className="m-0 hidden md:block text-[#555555] text-[14px]">
+                10 Jun 2021
+              </p>
+            </span>
+          </div>
+          {/* 3rd  */}
+          <div className="hidden lg:flex items-start gap-2">
+            <FaCalendarAlt />
+            <span className="flex flex-col gap-1">
+              <p className="m-0 text-[20px] font-normal text-[#222222]">
+                Check out
+              </p>
+              <p className="m-0 text-[#555555] text-[14px]">
+                10 Jun 2021
+              </p>
+            </span>
+          </div>
+          {/* 4th  */}
+          <div className="hidden md:flex items-start gap-2">
+            <FaUser />
+            <span className="flex flex-col gap-1">
+              <p className="m-0 text-[20px] font-normal text-[#222222]">
+                Rooms for
+              </p>
+              <p className="m-0 text-[#555555] text-[14px]">
+                1 room, 2 guests
+              </p>
+            </span>
+          </div>
+          <div className="bg-[#24AB70] flex gap-2 items-center px-2 py-6 md:px-8 rounded-full cursor-pointer">
+            <CiSearch color='#fff' size={25}/>
+            <p className="text-white">Search...</p>
+          </div>
+        </div>
             </div>
         </section>
     )
