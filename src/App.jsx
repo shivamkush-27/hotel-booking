@@ -1,5 +1,6 @@
 import Nav from "./Components/Nav";
 import Hero from "./sections/Hero";
+import PopularHotel from "./sections/PopularHotel";
 
 export default function App() {
   return (
@@ -9,6 +10,10 @@ export default function App() {
       <section className="">
         <Hero />
       </section>
+      <section className="">
+        <PopularHotel />
+      </section>
+
     </main>
     </>
   )
